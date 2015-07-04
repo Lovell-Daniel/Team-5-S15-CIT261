@@ -9,14 +9,19 @@
             function runYelp() {
                 var term = document.getElementById("term").value;
                 var location = document.getElementById("location").value;
-                yelp(term, location, function(response) {
+                var values = "term=" + term + "&location=" + location;
+                yelp(values, function(response) {
                     document.getElementById("output").innerHTML = response;
+                    var yelpObj = JSON.parse(response);
+                    document.getElementById("output1").innerHTML = yelpObj.businesses[0].location.display_address[0];
                 });
             }
         </script>
     </head>
     <body>
         <div id="output"></div>
+        <div id="output1"></div>
+
         <form>
             <label>Term: <input type="text" id="term" /></label><br />
             <label>Location: <input type="text" id="location" /></label><br />

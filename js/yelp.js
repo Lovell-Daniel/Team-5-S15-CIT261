@@ -1,4 +1,4 @@
-function yelp(term, location, callback) {
+function yelp(values, callback) {
     var httpRequest = new XMLHttpRequest(); //doesn't work with <MSIE7
     if (!httpRequest) {
         //alert for older browsers that don't support XMLHttpRequest
@@ -15,7 +15,7 @@ function yelp(term, location, callback) {
                 callback(httpRequest.responseText);
             }
         };
-        httpRequest.open('GET', "yelp.php?term=" + term + "&location=" + location);
+        httpRequest.open('GET', "yelp.php?" + values);
         httpRequest.send();
     }
 }
