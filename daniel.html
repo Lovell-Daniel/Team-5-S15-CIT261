@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daniel's Test Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/yelp.js"></script>
+        <script>
+            function runYelp() {
+                var term = document.getElementById("term").value;
+                var location = document.getElementById("location").value;
+                yelp(term, location, function(response) {
+                    document.getElementById("output").innerHTML = response;
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+        <form>
+            <label>Term: <input type="text" id="term" /></label><br />
+            <label>Location: <input type="text" id="location" /></label><br />
+            <button type="button" onclick="runYelp()">Run Test</button>
+        </form>
+        
+    </body>
+</html>
