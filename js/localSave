@@ -1,0 +1,15 @@
+function saveToLocal(text) {
+	if(typeof(Storage) !== "undefined") {
+		if (localStorage.json) {
+			// If storage already in use, overwrite
+			localStorage.json = text;
+		} else {
+			// Else, create storage and save text
+			localStorage.json = text;
+		}
+	} else {
+		// Insert message to location
+		document.getElementById().innerHTML = "Error: Cannot be saved...";
+		// Don't know where it is going, so the location is blank for now - Christian
+	}
+}
