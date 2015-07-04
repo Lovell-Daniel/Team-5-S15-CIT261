@@ -11,6 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         Peared Up
+        
         <?php
         // put your code here
         ?>
