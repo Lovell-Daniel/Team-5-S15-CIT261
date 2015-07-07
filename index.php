@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PearedUp</title>
-        <script type="text/javascript" src="buttons.js"></script>
+        <script type="text/javascript" src="/buttons.js"></script>
         <link type="text/css" href="pearedquestions.css" rel="stylesheet">
     </head>
     <body>
@@ -44,7 +44,9 @@ and open the template in the editor.
                 <input type="radio" name="third" value=" moderate" /> Something in-between Flowers? (Photo)
                 <input type="radio" name="third" value=" expensive"  /> Diamonds (Photo)
             </div>
-
+        </form>
+        
+        <form name="category">
             <!-- return &category_filter= -->
             <div id="questionthree">
                 <p>Pick a vacation spot:</p>
@@ -61,7 +63,9 @@ and open the template in the editor.
                     <input type="radio" name="genre" value="&category_filter=chinese"  /> China
                     <input type="radio" name="genre" value="&category_filter=steak" /> Desert
             </div>
-
+        </form>
+        
+        <form name="sort">
             <!-- return &sort= -->
             <div id="questionfour">
                 <p>How would you like your options sorted?</p>
@@ -69,7 +73,9 @@ and open the template in the editor.
                     <input type="radio" name="sort" value="&sort=1"/> closest [1]
                     <input type="radio" name="sort" value="&sort=2"/> rating  [2]
             </div>
-
+        </form>
+        
+        <form name="radius">
             <!-- return &radius_filter= -->
             <div id="questionfive">
                 <p>How many miles are you willing to drive from your entered location?</p>
@@ -78,7 +84,9 @@ and open the template in the editor.
                     <input type="radio" name="radius" value="&radius_filter=50"/> 50 miles
 
             </div>
+        </form>
         
+        <form name="limit">
             <!-- return &limit= -->
             <div id="questionsix">
                 <p>How many options would you like?</p>

@@ -6,24 +6,28 @@
 
 function userQuery(){
 
-    query_url = "http://api.yelp.com/v2/search/";
+    //query_url = "http://api.yelp.com/v2/search/";
     
-    loc = "location=" + document.getElementById("loc").value;
+    location = "location=" + document.getElementById("loc").value;
 
-    options = document.forms[0];
-    txt = "";
+    terms = document.forms[0];
+    term = "";
     i = 0;
     
-    for(i; i<options.length; i++){
-        if(options[i].checked){
-            txt+=options[i].value; 
+    for(i; i<terms.length; i++){
+        if(terms[i].checked){
+            term+=terms[i].value; 
         } 
     }
-   values = loc + txt;
+    
+    category = document.forms["category"]["genre"].value;
+    sort = document.forms["sort"]["sort"].value; 
+    radius = document.forms["radius"]["radius"].value; 
+    limit = document.forms["limit"]["limit"].value; 
+    
+    
+    
+   values = location + term + category + sort + radius + limit;
    document.getElementById("demo").innerHTML = values;
    
 }
-
-
-
-    
