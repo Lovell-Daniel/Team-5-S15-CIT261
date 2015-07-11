@@ -47,7 +47,7 @@ var questSix = document.getElementById("questionsix");
 
 
 //add event when user clicks button
-submitButton.addEventListener("click", userQuery)
+submitButton.addEventListener("click", userQuery);
 partOne.addEventListener("click", changeText);
 partTwo.addEventListener("click", changeText2);
 partThree.addEventListener("click", changeText3);
@@ -58,38 +58,58 @@ questSix.addEventListener("click", changeText7);
 
 //function to perform when user clicks
 function changeText() {
-    partOne.style.opacity = 0; 
+    partOne.style.opacity = 0;
+    partOne.style.transition = "all 1s";
     partTwo.style.opacity = 1; 
+    partTwo.style.transform = "translateY(-70px)";
+    partTwo.style.transition = "all 1s";
 }
 
 function changeText2(){
     partTwo.style.opacity = 0; 
-    partThree.style.opacity = 1;     
+    partTwo.style.transition = "all 1s";
+    partThree.style.opacity = 1;    
+    partThree.style.transform = "translateY(-140px)";
+    partThree.style.transition = "all 1s";
 }
 
 function changeText3(){
     partThree.style.opacity = 0; 
+    partThree.style.transition = "all 1s";
     questThree.style.opacity = 1;
+    questThree.style.transform = "translateY(-210px)";
+    questThree.style.transition = "all 1s";
 }
 
 function changeText4(){
     questThree.style.opacity = 0; 
+    questThree.style.transition = "all 1s";
     questFour.style.opacity = 1; 
+    questFour.style.transform = "translateY(-280px)";
+    questFour.style.transition = "all 1s";
 }
 
 function changeText5(){
     questFour.style.opacity = 0; 
+    questFour.style.transition = "all 1s";
     questFive.style.opacity = 1; 
+    questFive.style.transform = "translateY(-350px)";
+    questFive.style.transition = "all 1s";
 }
 
 function changeText6(){
     questFive.style.opacity = 0; 
+    questFive.style.transition = "all 1s";
     questSix.style.opacity = 1; 
+    questSix.style.transform = "translateY(-420px)";
+    questSix.style.transition = "all 1s";
 }
 
 function changeText7(){
     questSix.style.opacity = 0; 
+    questSix.style.transition = "all 1s";
     submitButton.style.opacity = 1; 
+    submitButton.style.transform = "translateY(-490px)";
 }
 
 }

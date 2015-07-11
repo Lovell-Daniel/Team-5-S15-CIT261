@@ -24,7 +24,7 @@ and open the template in the editor.
 
             <!-- return &term= -->
  
-            <div id="partone">
+            <div id="partone" class="stack">
                 <p>Which photo most appeals to you?</p>
                 <!--first term quick, sit down, formal-->
                 <input type="radio" name="first" value="&term=fast"  /> Drive Thru (Photo)
@@ -32,7 +32,7 @@ and open the template in the editor.
                 <input type="radio" name="first" value="&term=formal" /> Formal (Photo)
             </div>
             
-            <div id="parttwo">
+            <div id="parttwo" class="stack">
                 <p>Which photo most appeals to you?</p>
                 <!--second term dinner lunch breakfast-->
                 <input type="radio" name="second" value=" breakfast"  /> Morning (Photo)
@@ -40,7 +40,7 @@ and open the template in the editor.
                 <input type="radio" name="second" value=" dinner" /> Evening (Photo)
             </div>
             
-            <div id="partthree">
+            <div id="partthree" class="stack">
             <p>Which photo most appeals to you?</p>                
                 <!--third term cheap, moderate, expensive -->
                 <input type="radio" name="third" value=" cheap" /> Happy Meal Toy (Photo)
@@ -51,7 +51,7 @@ and open the template in the editor.
         
         <form name="category">
             <!-- return &category_filter= -->
-            <div id="questionthree">
+            <div id="questionthree" class="stack">
                 <p>Pick a vacation spot:</p>
                     <input type="radio" name="genre" value="&category_filter=mexican" /> Mexico (photo)
                     <input type="radio" name="genre" value="&category_filter=japanese" /> Japan
@@ -70,7 +70,7 @@ and open the template in the editor.
         
         <form name="sort">
             <!-- return &sort= -->
-            <div id="questionfour">
+            <div id="questionfour" class="stack">
                 <p>How would you like your options sorted?</p>
                     <input type="radio" name="sort" value="&sort=0"/> best [0]
                     <input type="radio" name="sort" value="&sort=1"/> closest [1]
@@ -80,7 +80,7 @@ and open the template in the editor.
         
         <form name="radius">
             <!-- return &radius_filter= -->
-            <div id="questionfive">
+            <div id="questionfive" class="stack">
                 <p>How many miles are you willing to drive from your entered location?</p>
                     <input type="radio" name="radius" value="&radius_filter=10"/> 10 miles
                     <input type="radio" name="radius" value="&radius_filter=30"/> 30 miles
@@ -91,7 +91,7 @@ and open the template in the editor.
         
         <form name="limit">
             <!-- return &limit= -->
-            <div id="questionsix">
+            <div id="questionsix" class="stack">
                 <p>How many options would you like?</p>
                     <input type="radio" name="limit" value="&limit=2"/> 2 results
                     <input type="radio" name="limit" value="&limit=5"/> 5 results
@@ -102,7 +102,7 @@ and open the template in the editor.
         
         <br>
         
-        <button id="button" onclick="userQuery()">Submit</button>
+        <button id="button">Submit</button>
 
         <p id="demo"></p>
 
