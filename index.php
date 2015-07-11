@@ -8,10 +8,10 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PearedUp</title>
-        <script type="text/javascript" src="/js/buttons.js"></script>
+        <script type="text/javascript" src="/buttons.js"></script>
         <link type="text/css" href="pearedquestions.css" rel="stylesheet">
     </head>
-    <body>
+    <body onload="nextQuestion()">
         <h1>Peared Up</h1>
             
         <!-- return ?location= -->
@@ -23,8 +23,9 @@ and open the template in the editor.
         <form>
 
             <!-- return &term= -->
-            <p>Which photo most appeals to you?</p> 
+ 
             <div id="partone">
+                <p>Which photo most appeals to you?</p>
                 <!--first term quick, sit down, formal-->
                 <input type="radio" name="first" value="&term=fast"  /> Drive Thru (Photo)
                 <input type="radio" name="first" value="&term=sit down" /> Sit Down (Photo)
@@ -32,6 +33,7 @@ and open the template in the editor.
             </div>
             
             <div id="parttwo">
+                <p>Which photo most appeals to you?</p>
                 <!--second term dinner lunch breakfast-->
                 <input type="radio" name="second" value=" breakfast"  /> Morning (Photo)
                 <input type="radio" name="second" value=" lunch"  /> Midday (Photo)
@@ -39,6 +41,7 @@ and open the template in the editor.
             </div>
             
             <div id="partthree">
+            <p>Which photo most appeals to you?</p>                
                 <!--third term cheap, moderate, expensive -->
                 <input type="radio" name="third" value=" cheap" /> Happy Meal Toy (Photo)
                 <input type="radio" name="third" value=" moderate" /> Something in-between Flowers? (Photo)
@@ -99,7 +102,7 @@ and open the template in the editor.
         
         <br>
         
-        <button onclick="userQuery()">Display Query</button>
+        <button id="button" onclick="userQuery()">Submit</button>
 
         <p id="demo"></p>
 

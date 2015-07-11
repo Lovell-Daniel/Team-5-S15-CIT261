@@ -7,8 +7,33 @@ and open the template in the editor.
     Created on : Jul 3, 2015, 4:45:42 PM
     Author     : griffiths
 */
-/*
-*div input:checked {
-*    opacity: 0; 
-*}
-*/
+
+
+
+#parttwo {
+    opacity: 0; 
+}
+
+#partthree {
+    opacity: 0; 
+}
+
+#questionthree {
+    opacity: 0; 
+}
+
+#questionfour {
+    opacity: 0; 
+}
+
+#questionfive {
+    opacity: 0; 
+}
+
+#questionsix {
+    opacity: 0; 
+}
+
+#button {
+    opacity: 0; 
+}
