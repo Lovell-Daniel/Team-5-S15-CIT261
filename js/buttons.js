@@ -35,7 +35,7 @@ function userQuery(){
 function nextQuestion(){
 
 //declaring paragraph variable
-
+var getStarted = document.getElementById("getStarted");
 var submitButton = document.getElementById("button");    
 var partOne = document.getElementById("partone");
 var partTwo = document.getElementById("parttwo");
@@ -44,72 +44,114 @@ var questThree = document.getElementById("questionthree");
 var questFour = document.getElementById("questionfour");
 var questFive = document.getElementById("questionfive");
 var questSix = document.getElementById("questionsix");
+var locQuest = document.getElementById("questionone");
 
 
 //add event when user clicks button
+getStarted.addEventListener("click", firstText);
 submitButton.addEventListener("click", userQuery);
-partOne.addEventListener("click", changeText);
-partTwo.addEventListener("click", changeText2);
-partThree.addEventListener("click", changeText3);
-questThree.addEventListener("click", changeText4);
-questFour.addEventListener("click", changeText5); 
-questFive.addEventListener("click", changeText6); 
-questSix.addEventListener("click", changeText7); 
+partOne.addEventListener("change", changeText);
+partTwo.addEventListener("change", changeText2);
+partThree.addEventListener("change", changeText3);
+questThree.addEventListener("change", changeText4);
+questFour.addEventListener("change", changeText5); 
+questFive.addEventListener("change", changeText6); 
+questSix.addEventListener("change", changeText7); 
+locQuest.addEventListener("click", changeText8);
 
 //function to perform when user clicks
-function changeText() {
+function firstText(){
+    getStarted.style.visibility = "hidden"; 
+    partOne.style.visibility = "visible";
+    partOne.style.opacity = 1; 
+    partOne.style.transition = "visibility 3s";
+}
+    
+    
+function changeText(){
     partOne.style.opacity = 0;
-    partOne.style.transition = "all 1s";
+    partOne.style.visibility = "hidden"; 
+    partOne.style.transition = "opacity .5s";
+    partTwo.style.visibility = "visible";
     partTwo.style.opacity = 1; 
-    partTwo.style.transform = "translateY(-70px)";
-    partTwo.style.transition = "all 1s";
+    partTwo.style.transition = "visibility 3s";
+     
+   // partTwo.style.transform = "translateY(-70px)";
+    
 }
 
 function changeText2(){
     partTwo.style.opacity = 0; 
-    partTwo.style.transition = "all 1s";
+    partTwo.style.visibility = "hidden"; 
+    partTwo.style.transition = "opacity .5s";
+    partThree.style.visibility = "visible";
     partThree.style.opacity = 1;    
-    partThree.style.transform = "translateY(-140px)";
-    partThree.style.transition = "all 1s";
+  //  partThree.style.transform = "translateY(-140px)";
+    partThree.style.transition = "visibility 3s";
 }
 
 function changeText3(){
     partThree.style.opacity = 0; 
-    partThree.style.transition = "all 1s";
-    questThree.style.opacity = 1;
-    questThree.style.transform = "translateY(-210px)";
-    questThree.style.transition = "all 1s";
+    partThree.style.visibility = "hidden"; 
+    partThree.style.transition = "opacity .5s";
+    questThree.style.visibility = "visible";
+    questThree.style.opacity = 1;    
+  //  partThree.style.transform = "translateY(-140px)";
+    questThree.style.transition = "opacity 2s linear 3s";
+    
 }
 
 function changeText4(){
     questThree.style.opacity = 0; 
-    questThree.style.transition = "all 1s";
+    questThree.style.visibility = "hidden"; 
+    questThree.style.transition = "opacity .5s";
+    questFour.style.visibility = "visible"; 
     questFour.style.opacity = 1; 
-    questFour.style.transform = "translateY(-280px)";
-    questFour.style.transition = "all 1s";
+   // questFour.style.transform = "translateY(-280px)";
+    questFour.style.transition = "opacity 2s linear 3s";
+    
+    
 }
 
 function changeText5(){
     questFour.style.opacity = 0; 
-    questFour.style.transition = "all 1s";
+    questFour.style.visibility = "hidden"; 
+    questFour.style.transition = "opacity .5s";
+    questFive.style.visibility = "visible"; 
     questFive.style.opacity = 1; 
-    questFive.style.transform = "translateY(-350px)";
-    questFive.style.transition = "all 1s";
+  //  questFive.style.transform = "translateY(-350px)";
+    questFive.style.transition = "visibility 3s";
+
 }
 
 function changeText6(){
-    questFive.style.opacity = 0; 
-    questFive.style.transition = "all 1s";
+    questFive.style.opacity = 0;
+    questFive.style.visibility = "hidden"; 
+    questFive.style.transition = "opacity .5s";
+    questSix.style.visibility = "visible"; 
     questSix.style.opacity = 1; 
-    questSix.style.transform = "translateY(-420px)";
-    questSix.style.transition = "all 1s";
+   // questSix.style.transform = "translateY(-420px)";
+    questSix.style.transition = "visibility 3s";
+
 }
 
 function changeText7(){
     questSix.style.opacity = 0; 
-    questSix.style.transition = "all 1s";
+    questSix.style.visibility = "hidden";
+    questSix.style.transition = "opacity .5s";
+    locQuest.style.visibility = "visible"; 
+    locQuest.style.opacity = 1; 
+   // questSix.style.transform = "translateY(-420px)";
+    locQuest.style.transition = "visibility 3s";
+
+}
+
+function changeText8(){
+
+    submitButton.style.visibility = "visible";
     submitButton.style.opacity = 1; 
-    submitButton.style.transform = "translateY(-490px)";
+    submitButton.style.transition = "opacity 2s linear 3s";
+    //submitButton.style.transform = "translateY(-490px)";
 }
 
 }

@@ -8,11 +8,14 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PearedUp</title>
-        <script type="text/javascript" src="/css/buttons.js"></script>
-        <link type="text/css" href="pearedquestions.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/buttons.js"></script>
+        <link type="text/css" href="/css/pearedquestions.css" rel="stylesheet">
     </head>
     <body onload="nextQuestion()">
-        <h1>Peared Up</h1>
+        
+        <h1 id="welcome" class="welcome fadeIn">Peared Up</h1>
+        <h1 id="welcome2" class="welcome2 fadeIn"> Welcome </h1>
+        <button type="submit" id="getStarted" class="started fadeIn">Let's Get Started!</button>
             
         <!-- return ?location= -->
             <div id="questionone">
@@ -24,12 +27,15 @@ and open the template in the editor.
 
             <!-- return &term= -->
  
-            <div id="partone" class="stack">
-                <p>Which photo most appeals to you?</p>
+            <div id="partone">
+                <p>
+                    Please answer the following questions to best determine your dining destination:
+                    <br>Which photo most appeals to you?
+                </p>
                 <!--first term quick, sit down, formal-->
-                <input type="radio" name="first" value="&term=fast"  /> Drive Thru (Photo)
-                <input type="radio" name="first" value="&term=sit down" /> Sit Down (Photo)
-                <input type="radio" name="first" value="&term=formal" /> Formal (Photo)
+                <input type="radio" name="first" value="&term=fast"> Drive Thru (Photo)
+                <input type="radio" name="first" value="&term=sit down"> Sit Down (Photo)
+                <input type="radio" name="first" value="&term=formal"> Formal (Photo)
             </div>
             
             <div id="parttwo" class="stack">
@@ -100,11 +106,10 @@ and open the template in the editor.
    
         </form>
         
-        <br>
-        
-        <button id="button">Submit</button>
-
-        <p id="demo"></p>
+        <div>
+            <button id="button">Submit</button>
+            <p id="demo"></p>
+        </div>
 
 
     </body>
