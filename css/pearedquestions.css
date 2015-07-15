@@ -7,8 +7,17 @@ and open the template in the editor.
     Created on : Jul 3, 2015, 4:45:42 PM
     Author     : griffiths
 */
+
+
+
+*{
+    font-family: "jubilat", sans-serif;
+    color: #A49438
+}
+
 body {
-    background-color: #F3F3F3; 
+
+    background-color: #8C4E41; 
 }
 
 @-webkit-keyframes fadeIn { 
@@ -22,6 +31,7 @@ body {
 
 .welcome { 
     display: block;
+
     -webkit-animation-duration: 5s; 
     animation-duration: 5s; 
     -webkit-animation-fill-mode: both; 
@@ -66,76 +76,149 @@ h1 {
 
 #partone {
     visibility: hidden; 
-    transform: translateY(-70px);
+
 }
 
 #parttwo {
     visibility: hidden; 
     //opacity: 0;
-    transform: translateY(-140px);
+
     
 }
 
 #partthree {
     visibility: hidden; 
     //opacity: 0; 
-    transform: translateY(-210px);
+
     
 }
 
 #questionthree {
     visibility: hidden; 
     //opacity: 0; 
-    transform: translateY(-280px);
+
   
 }
 
 #questionfour {
     visibility: hidden; 
     //opacity: 0;
-    transform: translateY(-350px);
+
 
 }
 
 #questionfive {
     visibility: hidden; 
     //opacity: 0; 
-    transform: translateY(-420px);
+
  
 }
 
 #questionsix {
     visibility: hidden; 
+    margin-bottom: 800px;
     //opacity: 0; 
-    transform: translateY(-490px);
+
 }
 
 #button {
     visibility: hidden; 
-    //opacity: 0; 
-    transform: translateY(-500px);
-    m: center;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 30px;  
+    font-size: 1em;
+    background-color: #A49438;
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    border-radius: 17px;
+    border: none;
+    color: #8C4E41
     
 }
 
 #questionone {
+    
     visibility: hidden;
+
 }
 
 #getStarted {
-    margin: auto; 
+    margin-top: 30px; 
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
     visibility: visible;  
+    font-size: 1em;
+    background-color: #A49438;
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    border-radius: 17px;
+    border: none;
+    color: #8C4E41
+    
 }
 
 #welcome {
-    text-align: center;
+    display: block;
+    margin: auto; 
+    width: 80%; 
+    height: 80%; 
+
 }
 
 #welcome2 {
-    text-align: center; 
+    font-family: "jubilat", sans-serif;
+    width: 80%;
+    margin: auto;
+    font-size: 1.5em;
 }
 
 div {
-    text-align: center;
+    text-align: center;     
 }
 
+table { 
+    border-collapse: collapse;
+    border-spacing: 0; 
+    margin: auto; 
+   
+}
+
+.table {
+    width: 80%; 
+}
+
+p {
+    font-family: "jubilat", sans-serif;
+    font-size: 1em; 
+}
+
+img {
+    width: 90%;
+    border-radius: 17px;
+}
+
+#heading {
+    position: fixed;
+}
+
+.mini {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+#yelp {
+    width: 10%;
+    position:fixed;
+    bottom: 10px;
+    left: 10px;
+    
+}
+
+.table tr {
+    vertical-align: baseline;
+}

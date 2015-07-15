@@ -2,9 +2,9 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
-
+*/
 function userQuery(){
+
 
     //query_url = "http://api.yelp.com/v2/search/";
     
@@ -28,13 +28,14 @@ function userQuery(){
     
     
    values = loc + term + category + sort + radius + limit;
-   document.getElementById("demo").innerHTML = values;
+    document.getElementById("demo").innerHTML = values; 
    
 }
 
 function nextQuestion(){
 
 //declaring paragraph variable
+var start = document.getElementById('start');
 var getStarted = document.getElementById("getStarted");
 var submitButton = document.getElementById("button");    
 var partOne = document.getElementById("partone");
@@ -57,16 +58,20 @@ questThree.addEventListener("change", changeText4);
 questFour.addEventListener("change", changeText5); 
 questFive.addEventListener("change", changeText6); 
 questSix.addEventListener("change", changeText7); 
-locQuest.addEventListener("click", changeText8);
+
 
 //function to perform when user clicks
+
+
+
 function firstText(){
+    start.style.visibility = "hidden";
     getStarted.style.visibility = "hidden"; 
     partOne.style.visibility = "visible";
     partOne.style.opacity = 1; 
     partOne.style.transition = "visibility 3s";
+    window.location.hash = "#partone";
 }
-    
     
 function changeText(){
     partOne.style.opacity = 0;
@@ -75,9 +80,7 @@ function changeText(){
     partTwo.style.visibility = "visible";
     partTwo.style.opacity = 1; 
     partTwo.style.transition = "visibility 3s";
-     
-   // partTwo.style.transform = "translateY(-70px)";
-    
+    window.location.hash = "#parttwo";
 }
 
 function changeText2(){
@@ -88,6 +91,7 @@ function changeText2(){
     partThree.style.opacity = 1;    
   //  partThree.style.transform = "translateY(-140px)";
     partThree.style.transition = "visibility 3s";
+    window.location.hash = "#partthree";
 }
 
 function changeText3(){
@@ -98,7 +102,7 @@ function changeText3(){
     questThree.style.opacity = 1;    
   //  partThree.style.transform = "translateY(-140px)";
     questThree.style.transition = "opacity 2s linear 3s";
-    
+    window.location.hash = "#questionthree";
 }
 
 function changeText4(){
@@ -109,8 +113,7 @@ function changeText4(){
     questFour.style.opacity = 1; 
    // questFour.style.transform = "translateY(-280px)";
     questFour.style.transition = "opacity 2s linear 3s";
-    
-    
+    window.location.hash = "#questionfour";
 }
 
 function changeText5(){
@@ -121,7 +124,7 @@ function changeText5(){
     questFive.style.opacity = 1; 
   //  questFive.style.transform = "translateY(-350px)";
     questFive.style.transition = "visibility 3s";
-
+    window.location.hash = "#questionfive";
 }
 
 function changeText6(){
@@ -132,6 +135,7 @@ function changeText6(){
     questSix.style.opacity = 1; 
    // questSix.style.transform = "translateY(-420px)";
     questSix.style.transition = "visibility 3s";
+    window.location.hash = "#questionsix";
 
 }
 
@@ -143,15 +147,11 @@ function changeText7(){
     locQuest.style.opacity = 1; 
    // questSix.style.transform = "translateY(-420px)";
     locQuest.style.transition = "visibility 3s";
-
-}
-
-function changeText8(){
-
+    window.location.hash = "#questionone";
     submitButton.style.visibility = "visible";
     submitButton.style.opacity = 1; 
     submitButton.style.transition = "opacity 2s linear 3s";
-    //submitButton.style.transform = "translateY(-490px)";
 }
+
 
 }
