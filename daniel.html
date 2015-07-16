@@ -9,7 +9,16 @@
             function runYelp() {
                 var term = document.getElementById("term").value;
                 var location = document.getElementById("location").value;
-                var values = "term=" + term + "&location=" + location;
+                var limit = document.getElementById("limit").value;
+                var category_filter = document.getElementById("category_filter").value;
+                var sort = document.getElementById("sort").value;
+                var radius_filter = document.getElementById("radius_filter").value;
+                var values = "term=" + term +
+                        "&location=" + location +
+                        "&limit=" + limit +
+                        "&category_filter=" + category_filter +
+                        "&sort=" + sort +
+                        "&radius_filter=" + radius_filter;
                 yelp(values, function(response) {
                     document.getElementById("output").innerHTML = response;
                     var yelpObj = JSON.parse(response);
@@ -25,6 +34,11 @@
         <form>
             <label>Term: <input type="text" id="term" /></label><br />
             <label>Location: <input type="text" id="location" /></label><br />
+            <label>Limit: <input type="text" id="limit" /></label><br />
+            <label>Category Filter: <input type="text" id="category_filter" /></label><br />
+            <label>Sort: <input type="text" id="sort" /></label><br />
+            <label>Radius Filter: <input type="text" id="radius_filter" /></label><br />
+
             <button type="button" onclick="runYelp()">Run Test</button>
         </form>
         

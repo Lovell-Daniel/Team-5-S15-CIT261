@@ -27,8 +27,12 @@ $TOKEN = "xbDIZE018tjkPPWWuqW1oBmMbhkHEJok";
 $TOKEN_SECRET = "3KtOGZzxHpKWSSN856A6clM0BkM";
 $API_HOST = 'api.yelp.com';
 $DEFAULT_TERM = 'dinner';
-$DEFAULT_LOCATION = 'San Francisco, CA';
-$SEARCH_LIMIT = 3;
+$DEFAULT_LOCATION = 'Rexburg, ID';
+$DEFAULT_LIMIT = 3;
+$DEFAULT_CATEGORY_FILTER = 'restaurants';
+$DEFAULT_SORT = 0;
+$DEFAULT_RADIUS_FILTER = 8000;
+//$SEARCH_LIMIT = 3;
 $SEARCH_PATH = '/v2/search/';
 $BUSINESS_PATH = '/v2/business/';
 /** 
@@ -75,12 +79,15 @@ function request($host, $path) {
  * @param    $location    The search location passed to the API 
  * @return   The JSON response from the request 
  */
-function search($term, $location) {
+function search($term, $location, $limit, $category_filter, $sort, $radius_filter) {
     $url_params = array();
     
     $url_params['term'] = $term ?: $GLOBALS['DEFAULT_TERM'];
-    $url_params['location'] = $location?: $GLOBALS['DEFAULT_LOCATION'];
-    $url_params['limit'] = $GLOBALS['SEARCH_LIMIT'];
+    $url_params['location'] = $location ?: $GLOBALS['DEFAULT_LOCATION'];
+    $url_params['limit'] = $limit ?: $GLOBALS['DEFAULT_LIMIT'];
+    $url_params['category_filter'] = $category_filter ?: $GLOBALS['DEFAULT_CATEGORY_FILTER'];
+    $url_params['sort'] = $sort ?: $GLOBALS['DEFAULT_SORT'];
+    $url_params['radius_filter'] = $radius_filter ?: $GLOBALS['DEFAULT_RADIUS_FILTER'];
     $search_path = $GLOBALS['SEARCH_PATH'] . "?" . http_build_query($url_params);
     
     return request($GLOBALS['API_HOST'], $search_path);
@@ -131,6 +138,10 @@ $location = $options['location'] ?: '';
 query_api($term, $location);*/
 $term = (isset($_GET['term'])) ? $_GET['term'] : '';
 $location = (isset($_GET['location'])) ? $_GET['location'] : '';
-$result = search($term, $location);
+$limit = (isset($_GET['limit'])) ? $_GET['limit'] : '';
+$category_filter = (isset($_GET['category_filter'])) ? $_GET['category_filter'] : '';
+$sort = (isset($_GET['sort'])) ? $_GET['sort'] : '';
+$radius_filter = (isset($_GET['radius_filter'])) ? $_GET['radius_filter'] : '';
+$result = search($term, $location, $limit);
 echo "$result";
 ?>
