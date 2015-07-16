@@ -28,11 +28,11 @@ function userQuery(){
     
     
    values = loc + term + category + sort + radius + limit;
-    //document.getElementById("demo").innerHTML = values;
+    document.getElementById("demo").innerHTML = values;
     yelp(values, function(response) {
-        var yelpObj = JSON.parse(response);
+        //var yelpObj = JSON.parse(response);
         //document.getElementById("demo").innerHTML = yelpObj.businesses[0].location.display_address[0];
-        document.getElementById("demo").innerHTML = response;
+        document.getElementById("json").innerHTML = response;
 
     });
 
