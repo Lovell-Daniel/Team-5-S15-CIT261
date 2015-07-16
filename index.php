@@ -37,6 +37,7 @@ and open the template in the editor.
                 <button id="button">Submit</button>
                     <p id="demo"></p>
                     <p id="json"></p>
+                    <p id="output"></p>
             </div>
         
         <form>
