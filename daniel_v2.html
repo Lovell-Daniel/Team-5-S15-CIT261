@@ -7,10 +7,8 @@
         <script src="js/yelp.js"></script>
         <script>
             function runYelp() {
-                // var term = document.getElementById("term").value;
-                var term = "ice cream";
-                // var location = document.getElementById("location").value;
-                var location = "Rexburg, ID";
+                var term = document.getElementById("term").value;
+                var location = document.getElementById("location").value;
                 var numberOfResults = 3;
                 var values = "term=" + term + "&location=" + location;
                 var yelpObj;
