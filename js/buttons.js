@@ -28,10 +28,10 @@ function userQuery() {
 
 
     values = loc + term + category + sort + radius + limit;
-    document.getElementById("demo").innerHTML = values;
+    //document.getElementById("demo").innerHTML = values;
 
     yelp(values, function (response) {
-        document.getElementById("json").innerHTML = response;
+        //document.getElementById("json").innerHTML = response;
         saveToLocal(response);
         var yelpObj = JSON.parse(response);
         if (yelpObj.length === 0) {
