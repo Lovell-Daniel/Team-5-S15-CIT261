@@ -142,6 +142,6 @@ $limit = (isset($_GET['limit'])) ? $_GET['limit'] : '';
 $category_filter = (isset($_GET['category_filter'])) ? $_GET['category_filter'] : '';
 $sort = (isset($_GET['sort'])) ? $_GET['sort'] : '';
 $radius_filter = (isset($_GET['radius_filter'])) ? $_GET['radius_filter'] : '';
-$result = search($term, $location, $limit);
+$result = search($term, $location, $limit, $category_filter, $sort, $radius_filter);
 echo "$result";
 ?>
