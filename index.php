@@ -280,7 +280,7 @@ and open the template in the editor.
                         <td>
                             <img src="images/10mi.png" title="10mi">
                             <br>
-                            <input type="radio" name="radius" value="&radius_filter=10"/>  
+                            <input type="radio" name="radius" value="&radius_filter=16093"/>  
                             <br>
                         </td>
                 
@@ -288,7 +288,7 @@ and open the template in the editor.
                         <td>
                             <img src="images/30mi.png" title="30mi">
                             <br>
-                            <input type="radio" name="radius" value="&radius_filter=30"/>   
+                            <input type="radio" name="radius" value="&radius_filter=48280"/>   
                             <br>
                         </td> 
                   
@@ -296,7 +296,7 @@ and open the template in the editor.
                         <td>
                             <img src="images/50mi.png" title="50mi">
                             <br>
-                            <input type="radio" name="radius" value="&radius_filter=50"/>
+                            <input type="radio" name="radius" value="&radius_filter=80467"/>
                             <br>
                         </td>                          
                     </tr>
