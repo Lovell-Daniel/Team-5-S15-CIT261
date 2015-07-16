@@ -32,6 +32,7 @@ function userQuery() {
 
     yelp(values, function (response) {
         document.getElementById("json").innerHTML = response;
+        saveToLocal(response);
         var yelpObj = JSON.parse(response);
         if (yelpObj.length === 0) {
             document.getElementById("output").innerHTML = "Your search returned no results. Please try again.";
@@ -187,4 +188,20 @@ function nextQuestion() {
     }
 
 
+}
+
+function saveToLocal(text) {
+	if(typeof(Storage) !== "undefined") {
+		if (localStorage.json) {
+			// If storage already in use, overwrite
+			localStorage.json = text;
+		} else {
+			// Else, create storage and save text
+			localStorage.json = text;
+		}
+	} else {
+		// Insert message to location
+		document.getElementById().innerHTML = "Error: Cannot be saved...";
+		// Don't know where it is going, so the location is blank for now - Christian
+	}
 }
