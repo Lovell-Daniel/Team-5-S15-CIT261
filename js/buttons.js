@@ -57,6 +57,8 @@ function userQuery() {
                         + "</br>"
                         + yelpObj.businesses[i].location.display_address[1]
                         + "</br>"
+                        + yelpObj.businesses[i].location.display_address[2]
+                        + "</br>"
                         + "</br>";
             }
             document.getElementById("output").innerHTML = output;
