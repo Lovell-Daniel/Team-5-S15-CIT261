@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daniel's Test Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/yelp.js"></script>
+        <script>
+            function runYelp() {
+                // var term = document.getElementById("term").value;
+                var term = "ice cream";
+                // var location = document.getElementById("location").value;
+                var location = "Rexburg, ID";
+                var numberOfResults = 3;
+                var values = "term=" + term + "&location=" + location;
+                var yelpObj;
+                yelp(values, function (response) {
+                    // document.getElementById("output").innerHTML = response;
+                    yelpObj = JSON.parse(response);
+                    var output = "";
+                    for (var i = 0; i < numberOfResults; i++) {
+                        output += ""
+                                + "<img src=\"" + yelpObj.businesses[i].image_url + "\">"
+                                + "</br>"
+                                + yelpObj.businesses[i].name
+                                + "</br>"
+                                + "<img src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
+                                + "</br>"
+                                + yelpObj.businesses[i].review_count + " reviews"
+                                + "</br>"
+                                +yelpObj.businesses[i].display_phone
+                                + "</br>"
+                                + yelpObj.businesses[i].location.display_address[0]
+                                + "</br>"
+                                + yelpObj.businesses[i].location.display_address[1]
+                                + "</br>"
+                                + "</br>";
+                    }
+                    document.getElementById("output1").innerHTML = output;
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="output"></div>
+        <div id="output1"></div>
+
+        <form>
+            <label>Term: <input type="text" id="term" /></label><br />
+            <label>Location: <input type="text" id="location" /></label><br />
+            <button type="button" onclick="runYelp()">Run Test</button>
+        </form>
+
+    </body>
+</html>
