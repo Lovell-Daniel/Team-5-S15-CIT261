@@ -8,8 +8,8 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PearedUp</title>
-        <script type="text/javascript" src="/js/buttons.js"></script>
         <script type="text/javascript" src="/js/yelp.js"></script>
+        <script type="text/javascript" src="/js/buttons.js"></script>
         <script src="//use.typekit.net/sqb7zlh.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
