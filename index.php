@@ -8,12 +8,12 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PearedUp</title>
-        <script type="text/javascript" src="buttons.js"></script>
-        <script type="text/javascript" src="yelp.js"></script>
+        <script type="text/javascript" src="/js/buttons.js"></script>
+        <script type="text/javascript" src="/js/yelp.js"></script>
         <script src="//use.typekit.net/sqb7zlh.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <link type="text/css" href="pearedquestions.css" rel="stylesheet">
+        <link type="text/css" href="/css/pearedquestions.css" rel="stylesheet">
     </head>
     <body onload="nextQuestion()">
         
