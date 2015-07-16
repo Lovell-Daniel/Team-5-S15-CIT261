@@ -34,7 +34,7 @@ function userQuery() {
         //document.getElementById("json").innerHTML = response;
         saveToLocal(response);
         var yelpObj = JSON.parse(response);
-        if (yelpObj.length === 0) {
+        if (yelpObj.businesses.length === 0) {
             document.getElementById("output").innerHTML = "Your search returned no results. Please try again.";
         }
         else {
