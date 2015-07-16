@@ -45,6 +45,8 @@ function userQuery() {
                     + "</br>"
                     + yelpObj.businesses[i].review_count + " reviews"
                     + "</br>"
+                    + "<a href=\"" + yelpObj.businesses[i].url + "\">Read reviews on Yelp</a>"
+                    + "</br>"
                     + yelpObj.businesses[i].display_phone
                     + "</br>"
                     + yelpObj.businesses[i].location.display_address[0]
