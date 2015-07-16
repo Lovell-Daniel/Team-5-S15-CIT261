@@ -32,31 +32,35 @@ function userQuery() {
 
     yelp(values, function (response) {
         document.getElementById("json").innerHTML = response;
+        saveToLocal(response);
         var yelpObj = JSON.parse(response);
-
-        var output = "";
-        for (var i = 0; i < yelpObj.businesses.length; i++) {
-            output += ""
-                    + "<img src=\"" + yelpObj.businesses[i].image_url + "\">"
-                    + "</br>"
-                    + yelpObj.businesses[i].name
-                    + "</br>"
-                    + "<img src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
-                    + "</br>"
-                    + yelpObj.businesses[i].review_count + " reviews"
-                    + "</br>"
-                    + "<a href=\"" + yelpObj.businesses[i].url + "\">Read reviews on Yelp</a>"
-                    + "</br>"
-                    + yelpObj.businesses[i].display_phone
-                    + "</br>"
-                    + yelpObj.businesses[i].location.display_address[0]
-                    + "</br>"
-                    + yelpObj.businesses[i].location.display_address[1]
-                    + "</br>"
-                    + "</br>";
+        if (yelpObj.length === 0) {
+            document.getElementById("output").innerHTML = "Your search returned no results. Please try again.";
         }
-        document.getElementById("output").innerHTML = output;
-
+        else {
+            var output = "";
+            for (var i = 0; i < yelpObj.businesses.length; i++) {
+                output += ""
+                        + "<img src=\"" + yelpObj.businesses[i].image_url + "\">"
+                        + "</br>"
+                        + yelpObj.businesses[i].name
+                        + "</br>"
+                        + "<img src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
+                        + "</br>"
+                        + yelpObj.businesses[i].review_count + " reviews"
+                        + "</br>"
+                        + "<a href=\"" + yelpObj.businesses[i].url + "\">Read reviews on Yelp</a>"
+                        + "</br>"
+                        + yelpObj.businesses[i].display_phone
+                        + "</br>"
+                        + yelpObj.businesses[i].location.display_address[0]
+                        + "</br>"
+                        + yelpObj.businesses[i].location.display_address[1]
+                        + "</br>"
+                        + "</br>";
+            }
+            document.getElementById("output").innerHTML = output;
+        }
     });
 
 
@@ -184,4 +188,20 @@ function nextQuestion() {
     }
 
 
+}
+
+function saveToLocal(text) {
+	if(typeof(Storage) !== "undefined") {
+		if (localStorage.json) {
+			// If storage already in use, overwrite
+			localStorage.json = text;
+		} else {
+			// Else, create storage and save text
+			localStorage.json = text;
+		}
+	} else {
+		// Insert message to location
+		document.getElementById().innerHTML = "Error: Cannot be saved...";
+		// Don't know where it is going, so the location is blank for now - Christian
+	}
 }
