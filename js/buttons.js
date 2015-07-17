@@ -21,40 +21,40 @@ function userQuery() {
         }
     }
 
-/*
-    category = document.forms["category"]["genre"].value;
-    sort = document.forms["sort"]["sort"].value;
-    radius = document.forms["radius"]["radius"].value;
-    limit = document.forms["limit"]["limit"].value;
-*/
+    /*
+     category = document.forms["category"]["genre"].value;
+     sort = document.forms["sort"]["sort"].value;
+     radius = document.forms["radius"]["radius"].value;
+     limit = document.forms["limit"]["limit"].value;
+     */
     cat = document.getElementsByName("genre");
-    
-    for(var i = 0; i < cat.length; i++) {
-        if(cat[i].checked === true) {
+
+    for (var i = 0; i < cat.length; i++) {
+        if (cat[i].checked === true) {
             category = cat[i].value;
         }
     }
 
     sor = document.getElementsByName("sort");
-    
-    for(var i = 0; i < sor.length; i++) {
-        if(sor[i].checked === true) {
+
+    for (var i = 0; i < sor.length; i++) {
+        if (sor[i].checked === true) {
             sort = sor[i].value;
         }
     }
-    
+
     rad = document.getElementsByName("radius");
-    
-    for(var i = 0; i < rad.length; i++) {
-        if(rad[i].checked === true) {
+
+    for (var i = 0; i < rad.length; i++) {
+        if (rad[i].checked === true) {
             radius = rad[i].value;
         }
-    }    
+    }
 
     lim = document.getElementsByName("limit");
-    
-    for(var i = 0; i < lim.length; i++) {
-        if(lim[i].checked === true) {
+
+    for (var i = 0; i < lim.length; i++) {
+        if (lim[i].checked === true) {
             limit = lim[i].value;
         }
     }
@@ -217,16 +217,19 @@ function formatYelpResponse(yelpObj) {
     else {
         var output = "";
         for (var i = 0; i < yelpObj.businesses.length; i++) {
-            output += ""
-                    + "<img src=\"" + yelpObj.businesses[i].image_url + "\">"
+            output += "<div class=\"listing\">"
+                    + "<div class=\"listing-left\">"
+                    + "<img class=\"restaurant-img\" src=\"" + yelpObj.businesses[i].image_url + "\">"
                     + "</br>"
-                    + yelpObj.businesses[i].name
-                    + "</br>"
-                    + "<img src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
+                    + "<img class=\"rating-img\" src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
                     + "</br>"
                     + yelpObj.businesses[i].review_count + " reviews"
                     + "</br>"
                     + "<a href=\"" + yelpObj.businesses[i].url + "\">Read reviews on Yelp</a>"
+                    + "</br>"
+                    + "</div>"
+                    + "<div class=\"listing-right\">"
+                    + "<span class=\"restaurant-name\">" + yelpObj.businesses[i].name + "</span>"
                     + "</br>"
                     + yelpObj.businesses[i].display_phone
                     + "</br>"
@@ -238,7 +241,9 @@ function formatYelpResponse(yelpObj) {
                     + " "
                     + yelpObj.businesses[i].location.postal_code
                     + "</br>"
-                    + "</br>";
+                    + "</div>"
+                    + "</br>"
+                    + "</div>";
         }
         document.getElementById("output").innerHTML = output;
     }

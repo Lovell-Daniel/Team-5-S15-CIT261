@@ -224,3 +224,34 @@ img {
 .table tr {
     vertical-align: baseline;
 }
+
+.restaurant-img {
+    width: 150px;
+    height: 150px;
+}
+
+.rating-img {
+    width: 150px;
+    height: auto;
+}
+
+.restaurant-name {
+    font-size: 1.3em;
+    color: tan;
+}
+
+.listing {
+    float: left;
+}
+
+.listing-left {
+    float: left;
+}
+
+.listing-right {
+    float: left;
+}
+
+.clear-float {
+    clear: both;
+}
