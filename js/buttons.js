@@ -218,18 +218,18 @@ function formatYelpResponse(yelpObj) {
         var output = "";
         for (var i = 0; i < yelpObj.businesses.length; i++) {
             output += "<div class=\"listing\">"
+                    + "<span class=\"restaurant-name\">" + yelpObj.businesses[i].name + "</span>"
+                    + "</br>"
                     + "<div class=\"listing-left\">"
                     + "<img class=\"restaurant-img\" src=\"" + yelpObj.businesses[i].image_url + "\">"
                     + "</br>"
+                    + "</div>"
+                    + "<div class=\"listing-right\">"
                     + "<img class=\"rating-img\" src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
                     + "</br>"
                     + yelpObj.businesses[i].review_count + " reviews"
                     + "</br>"
                     + "<a href=\"" + yelpObj.businesses[i].url + "\">Read reviews on Yelp</a>"
-                    + "</br>"
-                    + "</div>"
-                    + "<div class=\"listing-right\">"
-                    + "<span class=\"restaurant-name\">" + yelpObj.businesses[i].name + "</span>"
                     + "</br>"
                     + yelpObj.businesses[i].display_phone
                     + "</br>"
