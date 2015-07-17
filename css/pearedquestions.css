@@ -18,6 +18,7 @@ and open the template in the editor.
 }
 
 body {
+    margin: auto; 
     width: 80%;
     background-color: #8C4E41; 
 }
@@ -44,10 +45,10 @@ body {
 
 .welcome2 { 
     display: block;
-    -webkit-animation-delay: 5s; 
-    animation-delay: 5s;
-    -webkit-animation-duration: 3s; 
-    animation-duration: 3s; 
+    -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
      -webkit-animation-fill-mode: both; 
     animation-fill-mode: both; 
     -webkit-animation-timing-function: ease-in; 
@@ -56,8 +57,8 @@ body {
 
 .started { 
     display: block;
-    -webkit-animation-delay: 10s; 
-    animation-delay: 10s;
+    -webkit-animation-delay: 4s; 
+    animation-delay: 4s;
     -webkit-animation-duration: 1s; 
     animation-duration: 1s; 
      -webkit-animation-fill-mode: both; 
