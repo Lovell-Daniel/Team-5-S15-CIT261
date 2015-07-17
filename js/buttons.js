@@ -6,6 +6,7 @@
 function userQuery() {
 
 
+
     //query_url = "http://api.yelp.com/v2/search/";
 
     loc = "location=" + document.getElementById("loc").value;
@@ -20,12 +21,43 @@ function userQuery() {
         }
     }
 
+/*
     category = document.forms["category"]["genre"].value;
     sort = document.forms["sort"]["sort"].value;
     radius = document.forms["radius"]["radius"].value;
     limit = document.forms["limit"]["limit"].value;
+*/
+    cat = document.getElementsByName("genre");
+    
+    for(var i = 0; i < cat.length; i++) {
+        if(cat[i].checked === true) {
+            category = cat[i].value;
+        }
+    }
 
+    sor = document.getElementsByName("sort");
+    
+    for(var i = 0; i < sor.length; i++) {
+        if(sor[i].checked === true) {
+            sort = sor[i].value;
+        }
+    }
+    
+    rad = document.getElementsByName("radius");
+    
+    for(var i = 0; i < rad.length; i++) {
+        if(rad[i].checked === true) {
+            radius = rad[i].value;
+        }
+    }    
 
+    lim = document.getElementsByName("limit");
+    
+    for(var i = 0; i < lim.length; i++) {
+        if(lim[i].checked === true) {
+            limit = lim[i].value;
+        }
+    }
 
     values = loc + term + category + sort + radius + limit;
     //document.getElementById("demo").innerHTML = values;

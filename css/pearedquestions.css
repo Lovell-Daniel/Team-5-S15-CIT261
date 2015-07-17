@@ -9,6 +9,8 @@ and open the template in the editor.
 */
 
 
+    
+
 
 *{
     font-family: "jubilat", sans-serif;
@@ -16,7 +18,7 @@ and open the template in the editor.
 }
 
 body {
-
+    width: 80%;
     background-color: #8C4E41; 
 }
 
