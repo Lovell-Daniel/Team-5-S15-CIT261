@@ -60,10 +60,10 @@ function userQuery() {
     }
 
     values = loc + term + category + sort + radius + limit;
-    document.getElementById("demo").innerHTML = values;
+//    document.getElementById("demo").innerHTML = values;
 
     yelp(values, function (response) {
-        document.getElementById("json").innerHTML = response;
+//        document.getElementById("json").innerHTML = response;
         saveToLocal(response);
         var yelpObj = JSON.parse(response);
         formatYelpResponse(yelpObj);
@@ -230,11 +230,13 @@ function formatYelpResponse(yelpObj) {
                     + "</br>"
                     + yelpObj.businesses[i].display_phone
                     + "</br>"
-                    + yelpObj.businesses[i].location.display_address[0]
+                    + yelpObj.businesses[i].location.address
                     + "</br>"
-                    + yelpObj.businesses[i].location.display_address[1]
-                    + "</br>"
-                    + yelpObj.businesses[i].location.display_address[2]
+                    + yelpObj.businesses[i].location.city
+                    + ", "
+                    + yelpObj.businesses[i].location.state_code
+                    + " "
+                    + yelpObj.businesses[i].location.postal_code
                     + "</br>"
                     + "</br>";
         }
