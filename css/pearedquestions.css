@@ -227,7 +227,7 @@ img {
 }
 
 #output {
-    margin: 0 auto;
+    margin: auto;
 }
 
 .restaurant-img {
@@ -247,7 +247,7 @@ img {
 }
 
 .listing {
-    width: 350px;
+    width: 375px;
     float: left;
     margin: 10px;
     line-height: 140%;
