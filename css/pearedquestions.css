@@ -9,12 +9,15 @@ and open the template in the editor.
 */
 
 
-    
+
 
 
 *{
     font-family: "jubilat", sans-serif;
     color: #A49438
+        ;
+    /* margin: auto; */
+    /* text-align: center; */
 }
 
 body {
@@ -49,7 +52,7 @@ body {
     animation-delay: 3s;
     -webkit-animation-duration: 1s; 
     animation-duration: 1s; 
-     -webkit-animation-fill-mode: both; 
+    -webkit-animation-fill-mode: both; 
     animation-fill-mode: both; 
     -webkit-animation-timing-function: ease-in; 
     animation-timing-function: ease-in; 
@@ -61,7 +64,7 @@ body {
     animation-delay: 4s;
     -webkit-animation-duration: 1s; 
     animation-duration: 1s; 
-     -webkit-animation-fill-mode: both; 
+    -webkit-animation-fill-mode: both; 
     animation-fill-mode: both; 
     -webkit-animation-timing-function: ease-in; 
     animation-timing-function: ease-in; 
@@ -86,21 +89,21 @@ h1 {
     visibility: hidden; 
     //opacity: 0;
 
-    
+
 }
 
 #partthree {
     visibility: hidden; 
     //opacity: 0; 
 
-    
+
 }
 
 #questionthree {
     visibility: hidden; 
     //opacity: 0; 
 
-  
+
 }
 
 #questionfour {
@@ -114,7 +117,7 @@ h1 {
     visibility: hidden; 
     //opacity: 0; 
 
- 
+
 }
 
 #questionsix {
@@ -138,11 +141,27 @@ h1 {
     border-radius: 17px;
     border: none;
     color: #8C4E41
-    
+
+}
+
+#startover {
+    visibility: hidden; 
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 30px;  
+    font-size: 1em;
+    background-color: #A49438;
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    border-radius: 17px;
+    border: none;
+    color: #8C4E41 
 }
 
 #questionone {
-    
+
     visibility: hidden;
 
 }
@@ -161,7 +180,7 @@ h1 {
     border-radius: 17px;
     border: none;
     color: #8C4E41
-    
+
 }
 
 #welcome {
@@ -181,13 +200,19 @@ h1 {
 
 div {
     text-align: center;     
+    margin: auto;
 }
 
 table { 
     border-collapse: collapse;
     border-spacing: 0; 
     margin: auto; 
-   
+
+}
+
+#resultlogo {
+    margin: auto;
+    visibility: hidden;
 }
 
 .table {
@@ -219,7 +244,7 @@ img {
     position:fixed;
     bottom: 10px;
     left: 10px;
-    
+
 }
 
 .table tr {
@@ -227,7 +252,7 @@ img {
 }
 
 #output {
-    margin: auto;
+    display: inline-grid;
 }
 
 .restaurant-img {
@@ -247,22 +272,27 @@ img {
 }
 
 .listing {
-    width: 375px;
-    float: left;
-    margin: 10px;
+    width: 420px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
     line-height: 140%;
 }
 
 .listing-left {
     float: left;
-    margin-right: 7px;
-    margin-top: 7px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .listing-right {
     float: left;
-    margin-top: 7px;
-    
+    margin-top: 10px;
+
+    margin-left: 10px;
+    text-align: left;
 }
 
 .clear-float {

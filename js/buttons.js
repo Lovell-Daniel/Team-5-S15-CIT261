@@ -4,8 +4,20 @@
  * and open the template in the editor.
  */
 function userQuery() {
+    
+    var submitButton = document.getElementById("button");
+    var locQuest = document.getElementById("questionone");
+    var startOver = document.getElementById("startover");
+    var resultLogo = document.getElementById("resultlogo");
 
-
+    locQuest.style.opacity = 0;
+    locQuest.style.visibility = "hidden";
+    submitButton.style.opacity = 0;
+    submitButton.style.visibility = "hidden";
+    window.location.hash = "#results";
+    resultLogo.style.visibility = "visible";
+    startOver.style.opacity = 1;
+    startOver.style.visibility = "visible";
 
     //query_url = "http://api.yelp.com/v2/search/";
 
@@ -68,6 +80,7 @@ function userQuery() {
         var yelpObj = JSON.parse(response);
         formatYelpResponse(yelpObj);
     });
+    
 }
 
 function nextQuestion() {
@@ -86,6 +99,7 @@ function nextQuestion() {
     var locQuest = document.getElementById("questionone");
 
 
+
 //add event when user clicks button
     getStarted.addEventListener("click", firstText);
     submitButton.addEventListener("click", userQuery);
@@ -96,10 +110,6 @@ function nextQuestion() {
     questFour.addEventListener("change", changeText5);
     questFive.addEventListener("change", changeText6);
     questSix.addEventListener("change", changeText7);
-
-
-//function to perform when user clicks
-
 
 
     function firstText() {
