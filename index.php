@@ -47,8 +47,10 @@ and open the template in the editor.
         <div id="results">
             <img src="images/pearedlogo.png" alt="logo" title="logo" class="mini" id="resultlogo"/>
             <br><br>
-            <button id="startover" onclick="window.location='index.php'">Start Over!</button>
-            <div id="output"></div>
+            <!--<button id="startover" onclick="window.location='index.php'">Start Over!</button>-->
+            <!--<button id="startover" onclick="window.location.reload()">Start Over!</button>-->
+            <button id="startover" onclick="window.location=''">Start Over!</button>
+           <div id="output"></div>
 
         </div>
         <form>
