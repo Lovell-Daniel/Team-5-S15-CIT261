@@ -8,15 +8,15 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PearedUp</title>
-        <script type="text/javascript" src="/js/yelp.js"></script>
-        <script type="text/javascript" src="/js/buttons.js"></script>
+        <script type="text/javascript" src="js/yelp.js"></script>
+        <script type="text/javascript" src="js/buttons.js"></script>
         <script src="//use.typekit.net/sqb7zlh.js"></script>
         <script>try {
                 Typekit.load();
             } catch (e) {
             }</script>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <link type="text/css" href="/css/pearedquestions.css" rel="stylesheet">
+        <link type="text/css" href="css/pearedquestions.css" rel="stylesheet">
     </head>
     <body onload="nextQuestion()">
 
@@ -27,6 +27,8 @@ and open the template in the editor.
 
 
             <button type="submit" id="getStarted" class="started fadeIn">Let's Get Started!</button>
+            <button type="submit" id="lastSearch" class="started fadeIn">See Most Recent Search!</button>
+
         </div>
 
         <!-- return ?location= -->
@@ -45,7 +47,7 @@ and open the template in the editor.
         <div id="results">
             <img src="images/pearedlogo.png" alt="logo" title="logo" class="mini" id="resultlogo"/>
             <br><br>
-            <button id="startover" onclick="window.location='http://pearedup.lovelllabs.com'">Start Over!</button>
+            <button id="startover" onclick="window.location='index.php'">Start Over!</button>
             <div id="output"></div>
 
         </div>

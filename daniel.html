@@ -20,27 +20,77 @@
                         "&sort=" + sort +
                         "&radius_filter=" + radius_filter;
                 yelp(values, function(response) {
-                    document.getElementById("output").innerHTML = response;
+                    localStorage.setItem("lastSearch", response);
                     var yelpObj = JSON.parse(response);
-                    document.getElementById("output1").innerHTML = yelpObj.businesses[0].location.display_address[0];
+                    formatYelpResponse(yelpObj);
                 });
             }
+            function lastSearch() {
+                if (!localStorage.getItem("lastSearch")) {
+                    document.getElementById("output").innerHTML = "No previous searches can be found.";
+                } else {
+                    var lastSearch = JSON.parse(localStorage.getItem("lastSearch"));
+                    formatYelpResponse(lastSearch);
+                }
+            }
+            function formatYelpResponse(yelpObj) {
+                if (yelpObj.businesses.length === 0) {
+                    document.getElementById("output").innerHTML = "Your search returned no results. Please try again.";
+                } else {
+                    var output = "";
+                    for (var i = 0; i < yelpObj.businesses.length; i++) {
+                        output += "<div class=\"listing\">"
+                                + "<span class=\"restaurant-name\">" + yelpObj.businesses[i].name + "</span>"
+                                + "</br>"
+                                + "<div class=\"listing-left\">"
+                                + "<img class=\"restaurant-img\" src=\"" + yelpObj.businesses[i].image_url + "\">"
+                                + "</br>"
+                                + "</div>"
+                                + "<div class=\"listing-right\">"
+                                + "<img class=\"rating-img\" src=\"" + yelpObj.businesses[i].rating_img_url_large + "\">"
+                                + "</br>"
+                                + yelpObj.businesses[i].review_count + " reviews"
+                                + "</br>"
+                                + "<a href=\"" + yelpObj.businesses[i].url + "\">Read reviews on Yelp</a>"
+                                + "</br>"
+                                + yelpObj.businesses[i].display_phone
+                                + "</br>"
+                                + yelpObj.businesses[i].location.address
+                                + "</br>"
+                                + yelpObj.businesses[i].location.city
+                                + ", "
+                                + yelpObj.businesses[i].location.state_code
+                                + " "
+                                + yelpObj.businesses[i].location.postal_code
+                                + "</br>"
+                                + "</div>"
+                                + "</br>"
+                                + "</div>";
+                    }
+                    document.getElementById("output").innerHTML = output;
+                }
+            }
+
         </script>
     </head>
     <body>
-        <div id="output"></div>
-        <div id="output1"></div>
+        <form>
+            <button type="button" onclick="lastSearch()">Show Last Search</button>
+        </form>
 
         <form>
-            <label>Term: <input type="text" id="term" /></label><br />
-            <label>Location: <input type="text" id="location" /></label><br />
-            <label>Limit: <input type="text" id="limit" /></label><br />
-            <label>Category Filter: <input type="text" id="category_filter" /></label><br />
-            <label>Sort: <input type="text" id="sort" /></label><br />
-            <label>Radius Filter: <input type="text" id="radius_filter" /></label><br />
+            <label>Term: <input type="text" id="term" value="Mexican" /></label><br />
+            <label>Location: <input type="text" id="location" value="85201" /></label><br />
+            <label>Limit: <input type="text" id="limit" value="10" /></label><br />
+            <label>Category Filter: <input type="text" id="category_filter" value="mexican" /></label><br />
+            <label>Sort: <input type="text" id="sort" value="0" /></label><br />
+            <label>Radius Filter: <input type="text" id="radius_filter" value="16000" /></label><br />
 
             <button type="button" onclick="runYelp()">Run Test</button>
         </form>
         
+        <div id="output"></div>
+        <div id="test1"></div>
+        <div id="test2"></div>
     </body>
 </html>
