@@ -14,16 +14,32 @@ and open the template in the editor.
 
 *{
     font-family: "jubilat", sans-serif;
-    color: #A49438
-        ;
+    color: #717171;
     /* margin: auto; */
     /* text-align: center; */
 }
 
 body {
+    background-image: url('/images/background_2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
     margin: auto; 
+    /* background: rgba(255, 255, 255, 0.22); */   
+    /* border-radius: 20px; */
     width: 80%;
-    background-color: #8C4E41; 
+}
+
+td img {
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42);
+}
+
+#content {
+    background: rgba(255, 255, 255, 0.62);
+    border-radius: 50px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
 }
 
 @-webkit-keyframes fadeIn { 
@@ -135,29 +151,26 @@ h1 {
     margin-top: 20px;
     padding: 30px;  
     font-size: 1em;
-    background-color: #A49438;
+    //background-color: #A49438;
     -webkit-border-radius: 17;
     -moz-border-radius: 17;
-    border-radius: 17px;
-    border: none;
-    color: #8C4E41
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 
 }
 
 #startover {
     visibility: hidden; 
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+    /* margin-bottom: auto; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin-top: 20px; */
     padding: 30px;  
     font-size: 1em;
-    background-color: #A49438;
-    -webkit-border-radius: 17;
-    -moz-border-radius: 17;
-    border-radius: 17px;
-    border: none;
-    color: #8C4E41 
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 #questionone {
@@ -174,14 +187,32 @@ h1 {
     padding: 30px;
     visibility: visible;  
     font-size: 1em;
-    background-color: #A49438;
     -webkit-border-radius: 17;
     -moz-border-radius: 17;
-    border-radius: 17px;
-    border: none;
-    color: #8C4E41
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 
+    color: rgb(171, 150, 44);
 }
+
+#lastSearch {
+        margin-top: 30px; 
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    visibility: visible;  
+    font-size: 1em;
+    -webkit-border-radius: 17;
+    -moz-border-radius: 17;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
+    color: rgb(171, 150, 44);
+}
+
 
 #welcome {
     display: block;
@@ -189,6 +220,9 @@ h1 {
     width: 80%; 
     height: 80%; 
 
+    /* image-rendering: pixelated; */
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #welcome2 {
@@ -196,6 +230,8 @@ h1 {
     width: 80%;
     margin: auto;
     font-size: 1.5em;
+    /* background: rgba(255, 255, 255, 0.62); */
+    /* border-radius: 20px; */
 }
 
 div {
@@ -216,17 +252,23 @@ table {
 }
 
 .table {
-    width: 80%; 
+    width: 100%; 
 }
 
 p {
     font-family: "jubilat", sans-serif;
-    font-size: 1em; 
+    font-size: 1.3em; 
+    margin: auto;
+    width: 95%;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 img {
     width: 90%;
     border-radius: 17px;
+    box-shadow: blueviolet;
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42); */
 }
 
 #heading {
@@ -234,8 +276,8 @@ img {
 }
 
 .mini {
-    width: 50%;
-    height: 50%;
+    width: 85%;
+    height: auto;
     margin: auto;
 }
 
@@ -253,6 +295,9 @@ img {
 
 #output {
     display: inline-grid;
+    margin: auto;
+    width: 100%;
+    text-align: center;
 }
 
 .restaurant-img {
@@ -272,19 +317,22 @@ img {
 }
 
 .listing {
-    width: 420px;
+    width: 450px;
     display: inline-block;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
     line-height: 140%;
+    background: rgba(255, 255, 255, 0.35);   border-radius: 20px;   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .listing-left {
     float: left;
     margin-right: 10px;
+    margin-left: 40px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .listing-right {
@@ -298,3 +346,4 @@ img {
 .clear-float {
     clear: both;
 }
+

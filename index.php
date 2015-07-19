@@ -19,7 +19,7 @@ and open the template in the editor.
         <link type="text/css" href="css/pearedquestions.css" rel="stylesheet">
     </head>
     <body onload="nextQuestion()">
-
+        <div id="content">
         <div id="start">
             <img src="images/pearedlogo.png" id="welcome" class="welcome fadeIn" title="logo" alt="logo">
             <p id="welcome2" class="welcome2 fadeIn"> Welcome to Peared Up, the app that pairs you with the perfect restaurant instantly!</p>
@@ -331,7 +331,7 @@ and open the template in the editor.
 
         </form>
 
-
+        </div>
     </body>
 
 </html>
