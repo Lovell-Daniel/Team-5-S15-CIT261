@@ -76,7 +76,8 @@ function userQuery() {
 
     yelp(values, function (response) {
 //        document.getElementById("json").innerHTML = response;
-        saveToLocal(response);
+//        saveToLocal(response);
+        localStorage.setItem("lastSearch", response);
         var yelpObj = JSON.parse(response);
         formatYelpResponse(yelpObj);
     });
@@ -87,6 +88,7 @@ function nextQuestion() {
 
 //declaring paragraph variable
     var start = document.getElementById('start');
+    var lastSearch = document.getElementById("lastSearch");
     var getStarted = document.getElementById("getStarted");
     var submitButton = document.getElementById("button");
     var partOne = document.getElementById("partone");
@@ -102,6 +104,7 @@ function nextQuestion() {
 
 //add event when user clicks button
     getStarted.addEventListener("click", firstText);
+    lastSearch.addEventListener("click", getLastSearch);
     submitButton.addEventListener("click", userQuery);
     partOne.addEventListener("change", changeText);
     partTwo.addEventListener("change", changeText2);
@@ -256,5 +259,31 @@ function formatYelpResponse(yelpObj) {
                     + "</div>";
         }
         document.getElementById("output").innerHTML = output;
+    }
+}
+
+function getLastSearch() {
+    var submitButton = document.getElementById("button");
+    var startOver = document.getElementById("startover");
+    var resultLogo = document.getElementById("resultlogo");
+    var start = document.getElementById('start');
+    var lastSearch = document.getElementById("lastSearch");
+    var getStarted = document.getElementById("getStarted");
+    
+    start.style.visibility = "hidden";
+    lastSearch.visibility = "hidden";
+    getStarted.style.visibility = "hidden";
+    submitButton.style.opacity = 0;
+    submitButton.style.visibility = "hidden";
+    window.location.hash = "#results";
+    resultLogo.style.visibility = "visible";
+    startOver.style.opacity = 1;
+    startOver.style.visibility = "visible";
+
+    if (!localStorage.getItem("lastSearch")) {
+        document.getElementById("output").innerHTML = "No previous searches can be found.";
+    } else {
+        var lastSearchResult = JSON.parse(localStorage.getItem("lastSearch"));
+        formatYelpResponse(lastSearchResult);
     }
 }
