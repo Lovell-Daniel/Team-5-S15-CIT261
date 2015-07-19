@@ -19,11 +19,14 @@ and open the template in the editor.
         <link type="text/css" href="css/pearedquestions.css" rel="stylesheet">
     </head>
     <body onload="nextQuestion()">
+
+        <img src="images/yelp_logo_100x50.png" alt="yelp" title="yelp" id="yelp"/>
+
         <div id="content">
             <div id="start">
                 <img src="images/pearedlogo.png" id="welcome" class="welcome fadeIn" title="logo" alt="logo">
                 <p id="welcome2" class="welcome2 fadeIn"> Welcome to Peared Up, the app that pairs you with the perfect restaurant instantly!</p>
-                <img src="images/Powered_By_Yelp_Yellow.png" alt="yelp" title="yelp" id="yelp"/>
+
 
 
                 <button type="submit" id="getStarted" class="started fadeIn">Let's Get Started!</button>

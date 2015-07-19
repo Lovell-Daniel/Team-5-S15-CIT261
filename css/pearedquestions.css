@@ -350,10 +350,10 @@ img {
 }
 
 #yelp {
+    max-width: 80px;
     width: 10%;
     position:fixed;
-    bottom: 10px;
-    left: 10px;
+    left: 5px;
 
 }
 
