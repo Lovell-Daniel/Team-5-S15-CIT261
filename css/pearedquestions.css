@@ -13,7 +13,7 @@ and open the template in the editor.
 
 
 *{
-    font-family: "jubilat", sans-serif;
+    font-family: "museo-slab", sans-serif;
     color: #717171;
     /* margin: auto; */
     /* text-align: center; */
@@ -226,7 +226,7 @@ h1 {
 }
 
 #welcome2 {
-    font-family: "jubilat", sans-serif;
+    font-family: "museo-slab", sans-serif;
     width: 80%;
     margin: auto;
     font-size: 1.5em;
@@ -256,7 +256,7 @@ table {
 }
 
 p {
-    font-family: "jubilat", sans-serif;
+    font-family: "museo-slab", sans-serif;
     font-size: 1.3em; 
     margin: auto;
     width: 95%;
@@ -267,7 +267,7 @@ p {
 img {
     width: 90%;
     border-radius: 17px;
-    box-shadow: blueviolet;
+    //box-shadow: blueviolet;
     /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42); */
 }
 
