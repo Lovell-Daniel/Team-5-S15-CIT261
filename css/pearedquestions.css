@@ -9,9 +9,6 @@ and open the template in the editor.
 */
 
 
-
-
-
 *{
     font-family: "museo-slab", sans-serif;
     color: #717171;
@@ -428,9 +425,19 @@ td, th {
     vertical-align: inherit;
 }
 
-#loc{
 
+#loc {
+  width: 50%;
+  height: 50px;
 }
+
+
+
+
+
+/*FOR SMALLER SCREENS*/
+
+
 @media screen and (max-width: 600px){
     *{
         font-family: "museo-slab", sans-serif;
