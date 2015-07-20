@@ -424,12 +424,12 @@ tbody {
 }
 
 td, th {
-  display: table-cell;
-  vertical-align: inherit;
+    display: table-cell;
+    vertical-align: inherit;
 }
 
 #loc{
-    
+
 }
 @media screen and (max-width: 600px){
     *{
@@ -453,9 +453,9 @@ td, th {
 
     td img {
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42);
-    
+
         width: 70%;
-}
+    }
 
     #content {
         background: rgba(255, 255, 255, 0.62);
@@ -747,8 +747,8 @@ td, th {
     .table {
 
 
-    
-}
+
+    }
 
     p {
         font-family: "museo-slab", sans-serif;
@@ -779,20 +779,19 @@ td, th {
     }
 
     #yelp {
-        max-width: 80px;
-        width: 20%;
-        position:fixed;
-        left: 140px;
-        bottom: 10px;
+        width: inherit;
+        bottom: 0px;
+        position: fixed;
+        left: 43%;
 
     }
 
     .table tr {
         width: 100%;
 
-    
+
         /* text-align: center; */
-}
+    }
 
     #output {
         display: inline-table;
@@ -814,9 +813,9 @@ td, th {
 
     .restaurant-name {
         font-size: 2em;
-    
+
         color: grey;
-}
+    }
 
     .listing {
         width: 90%;
@@ -835,11 +834,11 @@ td, th {
     .listing-left {
         display: block;
         margin: auto;
-    
+
         margin-top: 10px;
         text-align: center;
         width: 100%;
-}
+    }
 
     .listing-right {
         display: block;
@@ -855,25 +854,25 @@ td, th {
 
     tbody {
         display: inline-block;
-    
+
         vertical-align: middle;
-}
+    }
 
-td, th {
-  display: table-row;
-  vertical-align: inherit;
-  /* width: 100%; */
-}
+    td, th {
+        display: table-row;
+        vertical-align: inherit;
+        /* width: 100%; */
+    }
 
-audio {
-  width: 250px;
-  height: 30px;
-  margin-left: 3px;
-}
+    audio {
+        width: 250px;
+        height: 30px;
+        margin-left: 3px;
+    }
 
-#loc {
-    width: 90%;
-    
-    height: 30px;
-}
+    #loc {
+        width: 90%;
+
+        height: 30px;
+    }
 }
