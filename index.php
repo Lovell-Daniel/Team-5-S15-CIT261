@@ -214,7 +214,7 @@ and open the template in the editor.
                             <td>
                                 <img src="images/usa.png" title="usa">
                                 <br>
-                                <input type="radio" name="genre" value="&category_filter=american"  />   
+                                <input type="radio" name="genre" value="&category_filter=diners"  />   
                                 <br>
                             </td> 
 
@@ -222,7 +222,7 @@ and open the template in the editor.
                             <td>
                                 <img src="images/england.png" title="england">
                                 <br>
-                                <input type="radio" name="genre" value="&category_filter=english" />
+                                <input type="radio" name="genre" value="&category_filter=pubs" />
                                 <br>
                             </td>                          
                         </tr>
